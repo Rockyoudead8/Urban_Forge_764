@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styling/s1.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <form action="/create" method="post">
+
+        <div class="box2">
+            <inline>
+                <h1>DONT HAVE AN ACCOUNT ? </h1>
+            </inline>
+            <div><input class="px-5 py-3 bg-transparent " type="text" name="name" placeholder="enter name" id="name">
+            </div>
+            <div><input class="px-5 py-3 bg-transparent" type="email" name="email" id="email" placeholder="enter Email">
+            </div>
+            <div><input class="px-5 py-3 bg-transparent " type="password" name="password" placeholder="enter password"
+                    id="password"></div>
+            <!-- <div><input class="px-5 py-3 bg-transparent " type="password" name="cpassword"
+                    placeholder="confirm the password" id="cpassword"></div> -->
+            <input class="input1" type="submit" placeholder="create profile">
+            <h1>ALREADY A USER ? </h1>
+            <button id="login" type="button" onclick="window.location.href='/login'"
+                class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Go to Login
+            </button>
+            <h1 class="mt-6">ARE YOU A SELLER?</h1>
+            <button id="seller-signup" type="button" onclick="window.location.href='/seller-signup'"
+                class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Sign Up as Seller
+            </button>
+        </div>
+
+
+
+    </form>
+
+
+
+</body>
+
+</html>

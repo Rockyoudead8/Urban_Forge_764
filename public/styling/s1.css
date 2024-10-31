@@ -1,0 +1,40 @@
+body{
+    background-image: url("/images/DALL·E\ 2024-10-30\ 21.13.02\ -\ A\ pop\ culture-inspired\ digital\ artwork\ featuring\ a\ vibrant\,\ urban\ cityscape\ at\ night.\ Neon\ lights\ illuminate\ skyscrapers\ with\ colorful\ billboards\ and\ .webp");
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    }
+    
+    .input1{
+        background-color: black;
+        color: white;
+        border: 3px solid lightslategray;
+        margin-top: 30px;
+        width: 150px;
+        height: 70px;
+        
+    }
+    
+    .box2{
+        margin: 100px;
+        background-color: rgba(0, 0, 0, 0.534);
+        width: 40vw;
+        height: 90vh;
+        border: 3px solid white;
+        padding: 470px;
+        padding-bottom: 20px;
+        color: white;
+        
+    }
+    h1{
+        border : 3px solid springgreen;
+        width: 250px;
+        height: 50px;
+    }
+    
+    
+    
+        
+    
+    
+    
