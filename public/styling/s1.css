@@ -1,40 +1,115 @@
-body{
-    background-image: url("/images/DALL·E\ 2024-10-30\ 21.13.02\ -\ A\ pop\ culture-inspired\ digital\ artwork\ featuring\ a\ vibrant\,\ urban\ cityscape\ at\ night.\ Neon\ lights\ illuminate\ skyscrapers\ with\ colorful\ billboards\ and\ .webp");
-    height: 100vh;
-    width: 100vw;
-    position: relative;
+body {
+    /* overflow: hidden; */ /* Allow scrolling */
+    background-image: url("/images/DALL·E 2024-10-30 21.13.02 - A pop culture-inspired digital artwork featuring a vibrant, urban cityscape at night. Neon lights illuminate skyscrapers with colorful billboards and .webp");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.box2, .box3 {
+    margin: auto;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 40vw;
+    max-width: 500px;
+    height: auto;
+    padding: 20px;
+    border: 3px solid white;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.box3 {
+    margin-top: 40px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+}
+
+.divider {
+    border-left: 2px solid white;
+    height: auto;
+}
+
+.already-user, .seller-info {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.input1, 
+button {
+    background-color: black;
+    color: white;
+    border: 3px solid lightslategray;
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.input1:hover, 
+button:hover {
+    background-color: darkslategray;
+    transform: scale(1.05);
+}
+
+.main_heading {
+    text-align: center;
+    border: 3px solid springgreen;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.primary_input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.primary_input input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    font-size: 16px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .box2, .box3 {
+        width: 90vw;
+        padding: 15px;
     }
-    
-    .input1{
-        background-color: black;
-        color: white;
-        border: 3px solid lightslategray;
-        margin-top: 30px;
-        width: 150px;
-        height: 70px;
-        
+
+    .input1, 
+    button {
+        height: 45px;
+        font-size: 14px;
     }
-    
-    .box2{
-        margin: 100px;
-        background-color: rgba(0, 0, 0, 0.534);
-        width: 40vw;
-        height: 90vh;
-        border: 3px solid white;
-        padding: 470px;
-        padding-bottom: 20px;
-        color: white;
-        
+
+    .primary_input input {
+        font-size: 14px;
     }
-    h1{
-        border : 3px solid springgreen;
-        width: 250px;
-        height: 50px;
+
+    .main_heading {
+        font-size: 18px;
+        padding: 8px;
     }
-    
-    
-    
-        
-    
-    
-    
+
+    h1 {
+        font-size: 18px;
+    }
+}

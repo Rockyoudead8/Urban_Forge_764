@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="/styling/s2.css">
 </head>
+
 <body>
-    <form action="/read" method="post">
-    <div><input class="px-5 py-3 bg-transparent" type="email" name="email" id="email" placeholder="enter Email">
+    <div class="container"> <!-- Added a container for better layout -->
+        <form action="/read" method="post">
+            <div>
+                <h1>Welcome back</h1>
+            </div>
+            <div>
+                <input class="px-5 py-3 bg-transparent" type="email" name="email" id="email" placeholder="Enter Email">
+            </div>
+            <div>
+                <input class="px-5 py-3 bg-transparent" type="password" name="password" placeholder="Enter Password">
+            </div>
+            <div>
+                <input type="submit" name="login" id="submit" value="SUBMIT">
+            </div>
+        </form>
+
+        <div class="sign-up-box">
+            <p>NOT REGISTERED?</p>
+            <button id="signup-button" type="button" onclick="window.location.href='/index'">Sign up</button>
+        </div>
     </div>
-    <div><input class="px-5 py-3 bg-transparent " type="password" name="password" placeholder="enter password">
-    </div>
-    <div>
-        <input type="submit" name="login" id="submit">
-    </div>
-</form>
 </body>
+
 </html>
