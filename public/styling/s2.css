@@ -15,7 +15,7 @@ form {
     width: 90vw; /* Width based on viewport width */
     max-width: 400px; /* Maximum width to prevent it from being too wide on larger screens */
     padding: 20px; /* Adjusted padding for better spacing */
-    border: 3px solid white; /* White border for the form */
+    border: 3px solid springgreen; /* Green border for the form */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
     color: white;
@@ -33,21 +33,23 @@ h1 {
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-input[type="email"],
-input[type="password"],
-input[type="text"] {
+.input-field {
     width: 100%; /* Full width for input fields */
     padding: 10px; /* Padding for better usability */
-    border: none; /* Remove border */
+    border: 3px solid transparent; /* Initial border */
     border-radius: 4px; /* Rounded corners */
     margin-bottom: 15px; /* Space between input fields */
     font-size: 16px; /* Font size */
     color: white; /* Text color */
     background-color: rgba(0, 0, 0, 0.6); /* Darker transparent background */
     box-sizing: border-box; /* Include padding in the width */
+    transition: transform 0.3s, border-color 0.3s; /* Smooth transition */
 }
 
-
+.input-field:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    border-color: springgreen; /* Green border on hover */
+}
 
 input[type="submit"] {
     background-color: black; /* Black background for the submit button */

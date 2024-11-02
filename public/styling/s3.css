@@ -20,12 +20,13 @@ body {
     background-color: rgba(0, 0, 0, 0.7); /* Background for the form */
     padding: 20px; /* Padding inside the form */
     border-radius: 8px; /* Rounded corners */
-    border: 2px solid white; /* White border */
+    border: 3px solid springgreen; /* White border */
     width: 90vw; /* Fixed width for uniformity */
     max-width: 500px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
     margin-bottom: 20px; /* Space below the box */
 }
+
 h1 {
     text-align: center;
     border: 3px solid springgreen;
@@ -42,12 +43,27 @@ input[type="email"],
 input[type="password"] {
     width: 100%; /* Full width for input fields */
     padding: 10px; /* Padding for usability */
-    border: none; /* Remove border */
+    border: 3px solid transparent; /* Initial transparent border */
     border-radius: 4px; /* Rounded corners */
     margin-bottom: 15px; /* Space between input fields */
     font-size: 16px; /* Font size */
     background-color: rgba(0, 0, 0, 0.6); /* Consistent background color */
     color: white; /* Text color */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: springgreen; /* Green accent border on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: springgreen; /* Consistent green border on focus */
+    transform: scale(1.05); /* Slightly scale up on focus */
 }
 
 input[type="submit"] {
@@ -84,12 +100,6 @@ a.input1 {
 a.input1:hover {
     background-color: darkslategray; /* Darken background on hover */
     transform: scale(1.05); /* Slightly scale up on hover */
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: springgreen; /* Change border color on focus */
 }
 
 /* Responsive design for smaller screens */
