@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,21 +14,32 @@
     <form action="/create" method="post">
 
         <div class="box2">
-            <h1 class="main_heading">DONT HAVE AN ACCOUNT ?</h1>
-            <div class="primary_input">
-                <input class="px-5 py-3 bg-transparent" type="text" name="name" placeholder="Enter Name" id="name">
+            <inline>
+                <h1>DONT HAVE AN ACCOUNT ? </h1>
+            </inline>
+            <div><input class="px-5 py-3 bg-transparent " type="text" name="name" placeholder="enter name" id="name">
             </div>
-            <div class="primary_input">
-                <input class="px-5 py-3 bg-transparent" type="email" name="email" id="email" placeholder="Enter Email">
+            <div><input class="px-5 py-3 bg-transparent" type="email" name="email" id="email" placeholder="enter Email">
             </div>
-            <div class="primary_input">
-                <input class="px-5 py-3 bg-transparent" type="tel" name="phone" id="phone" placeholder="Enter Phone Number">
-            </div>
-            <div class="primary_input">
-                <input class="px-5 py-3 bg-transparent" type="password" name="password" placeholder="Enter Password" id="password">
-            </div>
-            <button type="submit" class="input1">Create Profile</button>
+            <div><input class="px-5 py-3 bg-transparent " type="password" name="password" placeholder="enter password"
+                    id="password"></div>
+             <div><input class="px-5 py-3 bg-transparent " type="password" name="cpassword"
+                    placeholder="confirm the password" id="cpassword"></div> -->
+            <input class="input1" type="submit" placeholder="create profile">
+            <h1>ALREADY A USER ? </h1>
+            <button id="login" type="button" onclick="window.location.href='/login'"
+                class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Go to Login
+            </button>
+            <h1 class="mt-6">ARE YOU A SELLER?</h1>
+            <button id="seller-signup" type="button" onclick="window.location.href='/seller-signup'"
+                class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Sign Up as Seller
+            </button>
         </div>
+
+
+
     </form>
 
     <div class="box3">

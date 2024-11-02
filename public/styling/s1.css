@@ -17,6 +17,7 @@ body {
     height: auto;
     padding: 20px;
     border: 3px solid white;
+    border: 3px solid springgreen;
     border-radius: 8px;
     color: white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
@@ -71,6 +72,7 @@ button:hover {
     margin-bottom: 15px;
     border-radius: 4px;
     font-size: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); /* Permanent green glow */
 }
 
 .primary_input {
@@ -86,6 +88,22 @@ button:hover {
     border-radius: 4px;
     font-size: 16px;
     color: white;
+    border: 2px solid transparent; /* Initial border to avoid layout shift */
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary_input input:hover {
+    transform: scale(1.05); /* Grows slightly */
+    background-color: rgba(0, 0, 0, 0.8); /* Darkens background on hover */
+    border-color: springgreen; /* Green accent border */
+    box-shadow: 0 0 8px rgba(0, 255, 127, 0.6); /* Soft green glow */
+}
+
+.primary_input input:focus {
+    outline: none;
+    transform: scale(1.05); /* Keeps size on focus as well */
+    border-color: springgreen; /* Consistent green border */
+    box-shadow: 0 0 8px rgba(0, 255, 127, 0.8); /* Slightly stronger green glow on focus */
 }
 
 @media (max-width: 600px) {
