@@ -1,0 +1,189 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+}
+.navbar {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #f5b400;
+}
+.navbar h1 {
+    color: #f5b400;
+    font-size: 24px;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+}
+.sidebar a {
+    display: block;
+    color: #f5b400;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.sidebar a:hover {
+    background: #f5b400;
+    color: #333;
+    transform: scale(1.1);
+}
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+.card {
+    background: #444;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+.card h2 {
+    color: #f5b400;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.card table {
+    width: 100%;
+    color: #fff;
+}
+.card table th, .card table td {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+.card button {
+    padding: 8px 12px;
+    background: #f5b400;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card button:hover {
+    background: #e0a800;
+}
+
+/* Form Section Styling */
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1d; /* Dark background for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Heading Styling */
+form h2,
+form h3 {
+    color: #ff6584; /* Vibrant pink */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+/* Form Input Styling */
+form div {
+    margin-bottom: 20px;
+    color: #f8f9fa;
+}
+
+/* Text, Number, File, Select, and Textarea Fields */
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+    width: calc(100% - 24px); /* Ensures input stays within form bounds */
+    padding: 10px;
+    border: 2px solid #4ecca3; /* Bright teal border */
+    border-radius: 4px;
+    background-color: #222831; /* Dark background for inputs */
+    color: #f8f9fa;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+form input[type="file"] {
+    padding: 5px;
+}
+
+/* Placeholder Styling */
+form input[type="text"]::placeholder,
+form input[type="number"]::placeholder,
+form textarea::placeholder {
+    color: #bbbbbb; /* Light gray */
+    font-size: 14px;
+}
+
+/* Hover Effect for Input Fields */
+form input[type="text"]:hover,
+form input[type="number"]:hover,
+form input[type="file"]:hover,
+form select:hover,
+form textarea:hover {
+    border-color: #ffd369; /* Bright yellow border on hover */
+    background-color: #393e46; /* Slightly lighter background on hover */
+}
+
+/* Label Styling */
+form label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #ffd369; /* Soft yellow for labels */
+}
+
+/* Radio Buttons */
+form input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2);
+}
+
+/* Submit Button */
+form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6584; /* Vibrant pink */
+    border: 2px solid #ff6584;
+    border-radius: 4px;
+    color: #f8f9fa;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #ffa41b; /* Bright orange on hover */
+    border-color: #ffa41b;
+}
+
+/* Dropdown Select */
+select {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #222831;
+    color: #ffd369; /* Soft yellow */
+    border: 2px solid #4ecca3; /* Teal border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+

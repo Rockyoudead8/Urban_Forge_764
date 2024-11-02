@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Inventory</title>
+    <link rel="stylesheet" href="/styling/s6.css">
+    
+</head>
+<body>
+    <h1>PRODUCTS INVENTORY</h1>
+    <div class="products-container">
+        <% allproducts.forEach(function(product) { %>
+            <div class="card">
+                <div class="pic">
+                    <img src="<%= product.productpic %>" alt="<%= product.productname %>">
+                </div>
+                <div class="name">NAME: <%= product.productname %></div>
+                <div class="id">ID: <%= product.productid %></div>
+                <div class="price">Price: $<%= product.price %></div>
+                <div class="units">Units: <%= product.quantity %></div>
+                <div class="category">Category: <%= product.category %></div>
+                <div class="sizes">Size: <%= product.size %></div>
+                <div class="description">Description: <%= product.description %></div>
+                <div class="story">Story: <%= product.story %></div>
+            </div> 
+            
+        <% }) %>
+    </div>
+</body>
+</html>
