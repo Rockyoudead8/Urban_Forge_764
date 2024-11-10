@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Payment</title>
+    <link rel="stylesheet" href="/styling/payment.css">
+
+</head>
+<body>
+
+<div class="container">
+    <!-- Order Summary -->
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="item">
+            <span>Product 1</span>
+            <span>₹499</span>
+        </div>
+        <div class="item">
+            <span>Product 2</span>
+            <span>₹299</span>
+        </div>
+        <div class="item item-total">
+            <span>Total</span>
+            <span>₹798</span>
+        </div>
+    </div>
+
+    <!-- Payment Details -->
+    <div class="payment-details">
+        <h3>Payment Method</h3>
+        <div class="payment-methods">
+            <label>
+                <input type="radio" name="payment" value="credit-card" checked> Credit/Debit Card
+            </label>
+            <label>
+                <input type="radio" name="payment" value="net-banking"> Net Banking
+            </label>
+            <label>
+                <input type="radio" name="payment" value="upi"> UPI
+            </label>
+            <label>
+                <input type="radio" name="payment" value="cod"> Cash on Delivery
+            </label>
+        </div>
+    </div>
+
+    <!-- Billing Information -->
+    <div class="billing-info">
+        <h3>Billing Information</h3>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="John Doe">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="1234 Main St">
+
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="New York">
+
+        <label for="zip">Zip Code</label>
+        <input type="text" id="zip" placeholder="10001">
+    </div>
+
+    <!-- Total Amount -->
+    <div class="total-amount">
+        Total Payable: ₹798
+    </div>
+
+    <!-- Place Order Button -->
+    <button class="place-order">Place Order</button>
+</div>
+
+</body>
+</html>

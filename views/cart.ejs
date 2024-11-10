@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styling/cart.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <a href="/userpanel"><img src="/images/logo.png" height="70px"></a>
+
+            <form action="/search" method="get">
+                <input type="search" name="q" placeholder="Search..." required>
+                <!-- <button type="submit">Search</button> -->
+            </form>
+
+            <a href="/cart"><img src="\images\download.png" alt="" height="40px" id="cart"></a>
+            <a href="/wishlist"><img src="/images/heart_icon.png" alt="" height="40px" id="wishlist"></a>
+            <a href="/profile"><img src="/images/profile.png" alt="" height="40px" id="profile"></a>
+        </header>
+        <hr>
+    </div>
+
+    <div><a href="/userpanel">RETURN TO HOME</a></div>
+
+    <% if (allproducts.length === 0) { %>
+        <!-- If the array is empty, display the empty cart image and message -->
+        <div class="empty" style="font-family: 'Nosifer', serif;">
+            <img src="/images/emptycart.png" alt="empty cart">
+            <h1>WHY IS YOUR CART EMPTY?</h1>
+        </div>
+    <% } else { %>
+        <!-- If the array contains products, display them in separate cards -->
+        <div class="products-container">
+            <% allproducts.forEach(function(product) { %>
+                <div class="card">
+                    <div class="pic">
+                        <img src="<%= product.image %>" alt="<%= product.productname %>">
+                    </div>
+                    <div class="name">NAME: <%= product.productname %></div>
+                    <div class="price">Price: $<%= product.price %></div>
+                    <div class="category">Category: <%= product.category %></div>
+                    <div class="sizes">Size: <%= product.size %></div>
+                    <div class="description">Description: <%= product.description %></div>
+                    <div class="story">Story: <%= product.story %></div>
+                </div>
+            <% }) %>
+        </div>
+    <% } %>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popupForm").style.display = "flex";
+        }
+
+        function hidePopup() {
+            document.getElementById("popupForm").style.display = "none";
+        }
+
+        // Optional: Close the form when clicking outside of it
+        window.onclick = function (event) {
+            const popup = document.getElementById("popupForm");
+            if (event.target == popup) {
+                hidePopup();
+            }
+        }
+    </script>
+
+</body>
+
+</html>

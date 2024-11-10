@@ -1,0 +1,100 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8e44ad, #c0392b);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Nosifer", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
+    background-image: url("/images/png-clipart-window-drop-rain-glass-water-rain-texture-glass-thumbnail.png");
+    background-size: cover;
+    /* Cover the header area */
+    background-repeat: no-repeat;
+    /* Prevent tiling */
+    background-position: center;
+    /* Center the background image */
+    backdrop-filter: blur(100px);
+    /* Adjust blur for the glass effect */
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    /* Hide overflow for pseudo-element */
+    /* Adding a translucent overlay for a more "wet glass" effect */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay for dimming */
+    font-family: "Nosifer", sans-serif;
+}
+
+
+
+
+
+
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+}
+
+header img {
+    height: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+/* Centering the search box */
+input[type="search"] {
+    padding: 10px;
+    border: 1px solid #FFA500;
+    border-radius: 100px;
+    font-size: 16px;
+    width: 200px;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+    margin: 0 auto;
+    /* Flex settings to keep it centered */
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+input[type="search"]:focus {
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px;
+    /* Spacing between icons */
+}
+
+
+
+h1 {
+    color: #FFA500;
+    font-size: 24px;
+}
+
+/* Additional styling for links */
+a:hover img {
+    opacity: 0.8;
+}
+
+hr {
+    border: 1px solid #FFA500;
+    width: 100%;
+    margin: 0;
+    /* Remove default margin */
+}

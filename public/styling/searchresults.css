@@ -1,0 +1,160 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8e44ad, #c0392b);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #f0f0f5;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
+    background-image: url("/images/png-clipart-window-drop-rain-glass-water-rain-texture-glass-thumbnail.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+header img {
+    height: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+#searchInput {
+    padding: 10px;
+    border: 1px solid #FFA500;
+    border-radius: 100px;
+    font-size: 16px;
+    width: 200px;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+    margin: 0 auto;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+#searchInput:focus {
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px;
+}
+
+h1 {
+    color: #FFA500;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Results Container */
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Product Card Styling */
+.product-tile {
+    background-color: #000000;
+    border: 1px solid #FFA500;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.product-tile:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-tile h2 {
+    font-size: 1.2em;
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.product-tile p {
+    font-size: 1em;
+    color: #555;
+    margin: 8px 0;
+}
+
+.product-tile a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    color: black;
+    background-color: #FFA500;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-tile a:hover {
+    background-color: #ff7f00;
+}
+
+/* No Results Message */
+.results-container p {
+    font-size: 1.1em;
+    color: #f0f0f5;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #searchInput {
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    .product-tile {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #searchInput {
+        width: 180px;
+    }
+}

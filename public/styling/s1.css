@@ -1,133 +1,122 @@
-body {
-    /* overflow: hidden; */ /* Allow scrolling */
-    background-image: url("/images/DALL·E 2024-10-30 21.13.02 - A pop culture-inspired digital artwork featuring a vibrant, urban cityscape at night. Neon lights illuminate skyscrapers with colorful billboards and .webp");
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    width: 100%;
+/* s1.css */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-.box2, .box3 {
-    margin: auto;
-    margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 40vw;
-    max-width: 500px;
-    height: auto;
-    padding: 20px;
-    border: 3px solid white;
-    border: 3px solid springgreen;
-    border-radius: 8px;
-    color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #ffffff;
+    background: linear-gradient(to right, #8e44ad, #c0392b);
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(60, 30, 255, 0.8), rgba(0, 0, 0, 0.7));
+    border: 3.6px solid #ff1e80;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), 0 0 20px rgba(30, 144, 255, 0.6); /* Glow effect */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+form:hover {
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), 0 0 30px rgba(30, 144, 255, 0.8); /* Stronger glow on hover */
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e0e0e0;
     text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+
+    
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border-color: #00f921;
+    box-shadow: 0 0 8px #00f921; 
+}
+
+.input1 {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0000009f;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+}
+
+.input1:hover {
+    background-color: #00f921;
+    box-shadow: 0 0 15px #f6f6f6; /* Glow effect on button hover */
 }
 
 .box3 {
-    margin-top: 40px;
+    margin-top: 2rem;
+    text-align: center;
+    color: #e0e0e0;
 }
 
 .user-info {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1.5rem;
 }
 
-.divider {
-    border-left: 2px solid white;
-    height: auto;
+.sub-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.already-user, .seller-info {
-    flex: 1;
-    padding: 20px;
-    text-align: center;
-}
-
-.input1, 
-button {
-    background-color: black;
-    color: white;
-    border: 3px solid lightslategray;
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    font-size: 16px;
+button.input1 {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.input1:hover, 
-button:hover {
-    background-color: darkslategray;
-    transform: scale(1.05);
-}
-
-.main_heading {
-    text-align: center;
-    border: 3px solid springgreen;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-    font-size: 20px;
-    box-shadow: 0 0 15px rgba(0, 255, 127, 0.6); /* Permanent green glow */
-}
-
-.primary_input {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.primary_input input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 4px;
-    font-size: 16px;
-    color: white;
-    border: 2px solid transparent; /* Initial border to avoid layout shift */
-    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.primary_input input:hover {
-    transform: scale(1.05); /* Grows slightly */
-    background-color: rgba(0, 0, 0, 0.8); /* Darkens background on hover */
-    border-color: springgreen; /* Green accent border */
-    box-shadow: 0 0 8px rgba(0, 255, 127, 0.6); /* Soft green glow */
-}
-
-.primary_input input:focus {
-    outline: none;
-    transform: scale(1.05); /* Keeps size on focus as well */
-    border-color: springgreen; /* Consistent green border */
-    box-shadow: 0 0 8px rgba(0, 255, 127, 0.8); /* Slightly stronger green glow on focus */
-}
-
-@media (max-width: 600px) {
-    .box2, .box3 {
-        width: 90vw;
-        padding: 15px;
-    }
-
-    .input1, 
-    button {
-        height: 45px;
-        font-size: 14px;
-    }
-
-    .primary_input input {
-        font-size: 14px;
-    }
-
-    .main_heading {
-        font-size: 18px;
-        padding: 8px;
-    }
-
-    h1 {
-        font-size: 18px;
-    }
+button.input1:hover {
+    background-color: #ee12fa;
+    box-shadow: 0 0 15px #ffffff; /* Button glow effect on hover */
 }

@@ -8,12 +8,16 @@
     
 </head>
 <body>
+    
+
+
+    
     <h1>PRODUCTS INVENTORY</h1>
     <div class="products-container">
         <% allproducts.forEach(function(product) { %>
             <div class="card">
                 <div class="pic">
-                    <img src="<%= product.productpic %>" alt="<%= product.productname %>">
+                    <img src="<%= product.image %>" alt="<%= product.productname %>">
                 </div>
                 <div class="name">NAME: <%= product.productname %></div>
                 <div class="id">ID: <%= product.productid %></div>

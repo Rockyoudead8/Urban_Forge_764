@@ -17,7 +17,6 @@
 
     <div class="sidebar">
         <a href="/userpanel"><i class="fas fa-home"></i> Dashboard</a>
-        <!-- <a href="#"><i class="fas fa-box"></i> Products</a> -->
         <a href="/products"><i class="fas fa-box"></i> Product Inventory</a>
         <a href="#"><i class="fas fa-users"></i> Customers Reviews</a>
         <a href="/seller-signup"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -31,23 +30,26 @@
         <div>
             <h2>PRODUCT DETAILS</h2>
         </div>
-        <form action="/createproduct" method="post" enctype="multipart/form-data">
-            <!-- <div>Product Image
-                <input type="file" name="Image" required></input>
-            </div> -->
+        <div class="burger" onclick="toggleSidebar()">☰</div>
+        <div class="sidebar">
+            <!-- Sidebar content -->
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
 
-            <div>
-                <input type="text" name="productname" placeholder="Product Name" required>
+
+
+        <form action="/createproduct" method="post" enctype="multipart/form-data">
+            <div>Product Image
+                <input type="file" name="Image" required></input>
             </div>
-            <div>
-                <input type="text" name="productid" placeholder="Product Id" required>
-            </div>
-            <div>
-                <input type="text" name="Price" placeholder="Enter Price" pattern="^\d+(\.\d{2})?$" required>
-            </div>
-            <div>
-                <input type="number" name="quantity" placeholder="number of units" required>
-            </div>
+
+            <input type="text" name="productname" placeholder="Product Name" required>
+            <input type="text" name="productid" placeholder="Product Id" required>
+            <input type="text" name="price" placeholder="Enter Price" pattern="^\d+(\.\d{2})?$" required>
+            <input type="number" name="quantity" placeholder="number of units" required>
+
             <DIV>
                 <h3>SELECT CATEGORY</h3>
                 <select id="category" name="category" required>
@@ -55,6 +57,10 @@
                     <option value="T-Shirts">T-Shirts</option>
                     <option value="Jeans">Jeans</option>
                     <option value="Accessories">Accessories</option>
+                    <option value="Hoodies">Hoodies</option>
+                    <option value="Lowers">Lowers</option>
+                    <option value="Footwear">Footwear</option>
+                    <option value="Headwear">Headwear</option>
                 </select>
             </DIV>
             <div>
@@ -83,12 +89,14 @@
 
             <div>
                 <h3>ADD DESCRIPTION</h3>
-                <textarea name="desc" placeholder="Description of the product" required></textarea>
+                <textarea name="desc" placeholder="Description of the product" required
+                    style="resize: none;"></textarea>
             </div>
 
             <div>
                 <h3>ADD STORY OF THE ARTIST</h3>
-                <textarea name="story" placeholder="any story behind the artist"></textarea>
+                <textarea name="story" placeholder="any story behind the upload of the artist"
+                    style="resize: none;"></textarea>
             </div>
             <div><input type="submit" name="submit"></div>
 
@@ -96,6 +104,16 @@
 
 
     </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const content = document.querySelector('.content');
+            sidebar.classList.toggle('active');
+            content.classList.toggle('sidebar-active');
+        }
+    </script>
+
 
 </body>
 

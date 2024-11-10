@@ -1,72 +1,81 @@
+ body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* A more modern font */
+    background-color: #121212; /* Dark background for a moody vibe */
+    color: #f5f5f5; /* Light text color for contrast */
+    margin: 0;
+    padding: 20px;
+}
 
-        
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
+h1 {
+    color: #ff6b00; /* A vibrant orange reminiscent of Travis's style */
+    font-size: 32px; /* Larger heading for impact */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
 
-        h1 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
+/* Card styling */
+.card {
+    width: 300px;
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Deeper shadow for a bolder look */
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+}
 
-        /* Card styling */
-        .card {
-            width: 300px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            margin: 15px;
-            text-align: center;
-        }
+/* Placeholder for product image */
+.pic {
+    width: 100%;
+    height: 180px;
+    background-color: #444; /* Darker gray for placeholder */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #999;
+}
 
-        /* Placeholder for product image */
-        .pic {
-            width: 100%;
-            height: 180px;
-            background-color: #ddd;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            color: #999;
-        }
+/* Product details styling */
+.name {
+    font-size: 20px; /* Slightly larger for emphasis */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f5f5f5; /* Light color for better contrast */
+}
 
-        /* Product details styling */
-        .name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+.id, .price, .units, .category, .sizes, .description, .story {
+    font-size: 16px; /* Adjusted for readability */
+    color: #f5f5f5; /* Light text color */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
 
-        .id, .price, .units, .category, .sizes, .description, .story {
-            font-size: 18px;
-            color: #000000;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
+/* Price styling */
+.price {
+    color: #27ae60; /* Bright green for price */
+    font-weight: bold;
+    font-size: 20px; /* Larger font size for price */
+}
 
-        /* Price styling */
-        .price {
-            color: #27ae60;
-            font-weight: bold;
-            font-size: 18px;
-        }
+/* Container for product cards */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-        /* Container for product cards */
-        .products-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+/* Additional styling for hover effects */
+.card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+
+

@@ -1,0 +1,109 @@
+
+     
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: linear-gradient(to right, #8e44ad, #c0392b);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 90vw;
+            background: #242222;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            gap: 20px;
+        }
+        /* Image Gallery Section */
+        .image-gallery {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .image-gallery img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        /* Product Details Section */
+        .product-details {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .product-title {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 1.6em;
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .old-price {
+            font-size: 1em;
+            color: #777;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        .offers {
+            background: #000000;
+            color:white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .review-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .review-section .rating {
+            color: #ffa500;
+        }
+        .review-section .review-count {
+            color: #555;
+        }
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .action-buttons button {
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart {
+            background-color: #f0c14b;
+            color: #333;
+        }
+        .buy-now {
+            background-color: #ff9900;
+            color: #fff;
+        }
+        .add-to-cart:hover {
+            background-color: #ddb347;
+        }
+        .buy-now:hover {
+            background-color: #e68a00;
+        }
+        /* Product Description */
+        .description {
+            margin-top: 20px;
+        }

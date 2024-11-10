@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/styling/searchresults.css">
+</head>
+<body>
+    <header>
+        <a href="/userpanel"><img src="/images/logo.png" height="100px"></a>
+        <form action="/search" method="get">
+            <input type="search" name="q" placeholder="Search..." required>
+            <!-- <button type="submit">Search</button> -->
+        </form>
+        <a href="/cart"><img src="/images/download.png" alt="" height="40px" id="cart"></a>
+        <a href="/wishlist"><img src="/images/heart_icon.png" alt="" height="40px" id="wishlist"></a>
+        <a href="/profile"><img src="/images/profile.png" alt="" height="40px" id="profile"></a>
+    </header>
+    <hr>
+    <h1>Search Results for "<%= searchTerm %>"</h1>
+    <div class="results-container">
+        <% if (results.length > 0) { %>
+            <% results.forEach(product => { %>
+                <div class="product-tile">
+                    <h2><%= product.productname %></h2>
+                    <p><%= product.description %></p>
+                    <p>Price: $<%= product.price %></p>
+                    <a href="/product/<%= product._id %>">View Product</a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No results found for "<%= searchTerm %>"</p>
+        <% } %>
+    </div>
+</body>
+</html>

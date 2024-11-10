@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styling/s7.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&family=Nosifer&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/public/styling/cart.css">
+</head>
+
+<body>
+    <div>
+        <header>
+            <a href="/userpanel"><img
+                    src="/images/logo.png"
+                    height="100 px"></a>
+
+                    <form action="/search" method="get">
+                        <input type="search" name="q" placeholder="Search..." required>
+                        <!-- <button type="submit">Search</button> -->
+                    </form>
+                    
+
+            <a href="/cart"><img src="/images/download.png" alt="" height="40px" id="cart"></a>
+            <a href="/wishlist"><img
+                    src="/images/heart_icon.png"
+                    alt="" height="40px" id="wishlist"></a>
+            <a href="/profile"><img
+                    src="/images/profile.png"
+                    alt="" height="40px" id="profile"></a>
+        </header>
+        <hr>
+
+
+    </div>
+    <div class="box">
+        <div class="slideshow-container">
+            <!-- <div class="slide fade">
+                <img src="/images/50%off.png" style="width:100%">
+            </div> -->
+            <div class="slide fade">
+                <img src="/images/wardrobe.png" style="width:100%">
+            </div>
+            <div class="slide fade">
+                <img src="/images/title.png" style="width:100%">
+            </div>
+            
+        </div>
+
+    </div>
+    <div class="cat1">
+        <h1 style="font-size: 150px; "><u>categories</u></h1>
+    </div>
+
+
+
+    <div class="category">
+        <div class="tiles">
+            <a href="/products/shirts"><img src="/images/shirts.png" width="250px" height="250px" alt="shirts"></a>
+            <h2>Shirts</h2>
+        </div>
+        <div class="tiles">
+            <a href="/products/T-shirts"><img src="/images/tshirts.png" width="250px" height="250px" alt="Shirts"></a>
+            <h2>T-Shirts</h2>
+        </div>
+        <div class="tiles">
+            <a href="/products/Jeans"><img src="/images/jeans.png" width="250px" height="250px" alt="Shirts"></a>
+            
+            <h2>Jeans</h2>
+        </div>
+        <div class="tiles">
+            <a href="/products/Accessories"><img src="/images/accessories.png" width="250px" height="250px" alt="Shirts"></a>
+            
+            <h2>Accessories</h2>
+        </div>
+        <div class="tiles">
+            <a href="/products/Hoodies"><img src="/images/hoodies.png" width="250px" height="250px" alt="Shirts"></a>
+            
+            <h2>Hoodies</h2>
+        </div>
+
+        <div class="tiles">
+            <a href="/products/Lowers"><img src="/images/tousers.png" width="250px" height="250px" alt="Shirts"></a>
+            
+            <h2>Lowers</h2>
+        </div>
+        <div class="tiles">
+            <a href="/products/Footwear"><img src="/images/sneakers.png" width="250px" height="250px" alt="Shirts"></a>
+            
+            <h2>Footwear</h2>
+        </div>
+        <div class="tiles">
+            <a href="/products/Headwear"><img src="/images/caps.png" width="250px" height="250px" alt="Shirts"></a>
+            
+            <h2>Headwear</h2>
+        </div>
+    </div>
+    <div style="font-size: 15px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+        <footer>© 2024 Urban Forge. All rights reserved.<br>
+
+            All content, including but not limited to text, images, graphics, logos, and designs, featured on this
+            website is the property of Urban Forge and is protected by copyright and other intellectual property
+            laws. Unauthorized use, reproduction, or distribution of any material on this site without prior written
+            permission from Urban Forge is strictly prohibited.
+
+            Urban Forge is a trademark of Urban Forge, Inc. Any other trademarks appearing on this website are the
+            property of their respective owners.</footer>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.tiles').forEach(tile => {
+            tile.addEventListener('mousemove', (e) => {
+                const rect = tile.getBoundingClientRect();
+                const tileX = rect.left + rect.width / 2;
+                const tileY = rect.top + rect.height / 2;
+                const deltaX = (e.clientX - tileX) / tileX; // Calculate the X-axis movement
+                const deltaY = (e.clientY - tileY) / tileY; // Calculate the Y-axis movement
+
+                // Set the tilt effect based on mouse position
+                const tiltX = deltaY * 5; // Adjust the value for more or less tilt
+                const tiltY = -deltaX * 5; // Adjust the value for more or less tilt
+
+                tile.style.transform = `scale(1.03) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`; // Combine scale and tilt
+            });
+
+            tile.addEventListener('mouseleave', () => {
+                tile.style.transform = 'scale(1.0)'; // Reset the scale when mouse leaves
+            });
+        });
+
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.display = "none"); // Hide all slides
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block"; // Show the current slide
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides();
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

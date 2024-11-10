@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="/styling/products.css">
+</head>
+<body>
+    <header>
+        <h1>Products in <%= category || "All Categories" %> Category</h1>
+    </header>
+
+    <div class="category">
+        <% products.forEach(product => { %>
+            <div class="tiles">
+                <div class="pic">
+                    <img src="<%= product.image %>" alt="<%= product.productname %>">
+                </div>
+                <h2><%= product.productname %></h2>
+                <p>Category: <%= product.category %></p>
+                <p>Size: <%= product.size %></p>
+                <p>Price: $<%= product.price %></p>
+                <p>Description: <%= product.description %></p>
+                <a href="/product/<%= product.productid %>"><button class="buy-now" >Buy Now</button></a>
+            </div>
+        <% }) %>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Beyonce Boutique. All rights reserved.</p>
+    </footer>
+</body>
+</html>

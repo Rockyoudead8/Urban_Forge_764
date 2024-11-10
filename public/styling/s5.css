@@ -32,6 +32,7 @@ body {
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s;
+    margin-left: 20px;
 }
 .sidebar a:hover {
     background: #f5b400;
@@ -103,7 +104,7 @@ form div {
     color: #f8f9fa;
 }
 
-/* Text, Number, File, Select, and Textarea Fields */
+
 form input[type="text"],
 form input[type="number"],
 form input[type="file"],
@@ -138,7 +139,7 @@ form input[type="number"]:hover,
 form input[type="file"]:hover,
 form select:hover,
 form textarea:hover {
-    border-color: #ffd369; /* Bright yellow border on hover */
+    border-color: #ffd369; 
     background-color: #393e46; /* Slightly lighter background on hover */
 }
 
@@ -147,7 +148,7 @@ form label {
     display: inline-block;
     margin-right: 10px;
     font-size: 14px;
-    color: #ffd369; /* Soft yellow for labels */
+    color: #ffd369; 
 }
 
 /* Radio Buttons */
@@ -160,7 +161,7 @@ form input[type="radio"] {
 form input[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #ff6584; /* Vibrant pink */
+    background-color: #ff6584; 
     border: 2px solid #ff6584;
     border-radius: 4px;
     color: #f8f9fa;
@@ -171,7 +172,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #ffa41b; /* Bright orange on hover */
+    background-color: #ffa41b; 
     border-color: #ffa41b;
 }
 
@@ -180,10 +181,49 @@ select {
     font-size: 16px;
     padding: 10px;
     background-color: #222831;
-    color: #ffd369; /* Soft yellow */
-    border: 2px solid #4ecca3; /* Teal border */
+    color: #ffd369; 
+    border: 2px solid #4ecca3; 
     border-radius: 4px;
     box-sizing: border-box;
     transition: border-color 0.3s, background-color 0.3s;
 }
 
+/* Burger Icon Button */
+.burger {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f5b400;
+    z-index: 1001;
+}
+
+/* Hide the sidebar by default */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #333;
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    padding: 20px;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+}
+
+/* Sidebar visible when active */
+.sidebar.active {
+    left: 0;
+}
+
+/* Adjust content margin when sidebar is active */
+.content {
+    margin-left: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Content shifts when sidebar is active */
+.content.sidebar-active {
+    margin-left: 300px;
+}

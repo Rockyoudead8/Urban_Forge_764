@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Nosifer&family=Rubik+Glitch+Pop&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #8e44ad, #c0392b);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Nosifer", sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: #fff;
+    background-image: url("/images/png-clipart-window-drop-rain-glass-water-rain-texture-glass-thumbnail.png");
+    background-size: cover;
+    /* Cover the header area */
+    background-repeat: no-repeat;
+    /* Prevent tiling */
+    background-position: center;
+    /* Center the background image */
+    backdrop-filter: blur(100px);
+    /* Adjust blur for the glass effect */
+    position: relative;
+    z-index: 1000;
+    overflow: hidden;
+    /* Hide overflow for pseudo-element */
+    /* Adding a translucent overlay for a more "wet glass" effect */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Overlay for dimming */
+    font-family: "Nosifer", sans-serif;
+}
+
+
+
+
+
+
+
+header a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0 10px;
+}
+
+header img {
+    height: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.1);
+}
+
+/* Centering the search box */
+input[type="search"] {
+    padding: 10px;
+    border: 1px solid #FFA500;
+    border-radius: 100px;
+    font-size: 16px;
+    width: 200px;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out;
+    margin: 0 auto;
+    /* Flex settings to keep it centered */
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+input[type="search"]:focus {
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for products container */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on products container */
+.products-container:hover {
+    transform: scale(1.02);
+}
+
+/* Styling for each product card */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #f1f1f1;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.card .pic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.card .pic img:hover {
+    transform: scale(1.05);
+}
+
+/* Product details */
+.card .name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.card .name:hover {
+    color: #ff6f61;
+}
+
+.card .price, .card .category, .card .sizes {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Styling for the Add to Cart button */
+.add-to-cart {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.add-to-cart:hover {
+    background-color: #e55d4e;
+    transform: scale(1.05);
+}
+
+/* Empty cart section */
+.empty {
+    text-align: center;
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 50px;
+}
+
+.empty img {
+    max-width: 250px;
+    margin-bottom: 30px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Responsive styling for mobile view */
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+        margin: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card .name {
+        font-size: 1.1em;
+    }
+
+    .add-to-cart {
+        font-size: 1.1em;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 10px;
+    }
+}
+

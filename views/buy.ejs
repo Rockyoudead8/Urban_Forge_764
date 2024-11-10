@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="/styling/buy.css">
+    
+    
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="pic">
+        <img src="<%= product.image %>" alt="<%= product.productname %>">
+    </div>
+
+    <!-- Product Details Section -->
+    <div class="product-details">
+        <!-- Product Title -->
+        <h1 class="product-title"><%=product.productname%></h1>
+        
+        <!-- Price and Discount -->
+        <div class="price">
+            <%=product.price%> <span class="old-price">₹999</span>
+        </div>
+
+        <!-- Offers Section -->
+        <div class="offers">
+            <p>Bank Offer: Up to ₹59.80 discount on select cards</p>
+            <p>Partner Offer: Get GST invoice and save up to 28% on business purchases.</p>
+        </div>
+
+        <!-- Review Section -->
+        <div class="review-section">
+            <span class="rating">⭐ 2.3</span>
+            <span class="review-count">(16 ratings)</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="/cart"><button class="add-to-cart">Add to Cart</button></a>
+            <a href="/payment"><button class="buy-now">Buy Now</button></a>
+        </div>
+
+        <!-- Product Description -->
+        <div class="description">
+            <h3>Product Details</h3>
+            <p><%=product.description%></p>
+            <p><%=product.story%></p>
+            <p><strong>Size:<%=product.size%></strong> </p>
+            <p><strong>Delivery:</strong> Free delivery on orders above ₹299.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
